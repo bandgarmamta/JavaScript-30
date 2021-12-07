@@ -5,12 +5,12 @@
 }
 
 body{
-    margin:auto;
-    display:block;
-    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to right,#EE9CA7 ,#FFDDE1 );
 }
 
 img{
+    margin: auto;
     margin-top: 2rem;;
     display: block;
     background-color: var(--base-color);

@@ -1,7 +1,13 @@
 :root{
     --space : 10px;
-    --blur : 10px;
+    --blur : 0px;
     --base-color:#FFFF00;
+}
+
+body{
+    margin:auto;
+    display:block;
+    align-items: center;
 }
 
 img{

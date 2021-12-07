@@ -1,0 +1,23 @@
+:root{
+    --space : 10px;
+    --blur : 0px;
+    --base-color:#FFFF00;
+}
+
+body{
+    text-align: center;
+    background-image: linear-gradient(to right,#EE9CA7 ,#FFDDE1 );
+}
+
+img{
+    margin: auto;
+    margin-top: 2rem;;
+    display: block;
+    background-color: var(--base-color);
+    filter:blur(var(--blur));
+    padding: var(--space);
+}
+
+.hl{
+    color: var(--base-color);
+  }

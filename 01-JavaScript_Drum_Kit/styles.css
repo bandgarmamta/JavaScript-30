@@ -1,0 +1,32 @@
+body{
+    
+    margin: auto;
+    width:50%;
+    margin-top:20%;
+    background-image: linear-gradient(to right,#000428 , #004e92);
+    
+}
+.key{
+    display: inline;
+    transition: all 0.07s;
+    border: 5px solid black;
+    border-radius: 5px;
+    font-size: 40px;
+    width: 80px;
+    margin:10px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color:white;
+}
+
+.playing{
+    transform:scale(1.5);
+    border: 5px solid grey;
+}
+
+span{
+    color:black;
+    font-size: 20px;
+}

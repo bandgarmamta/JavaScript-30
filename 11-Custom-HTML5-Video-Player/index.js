@@ -6,6 +6,7 @@ const progressBar = player.querySelector('.progress__filled');
 const toggle = player.querySelector(".toggle")
 const skip = player.querySelectorAll("[data-skip]")
 const ranges = player.querySelectorAll(".player__slider")
+const fullScreen = player.querySelector(".fullscreen")
 
 // build functions
 function toggleVideo(){
@@ -40,6 +41,10 @@ function slideVideo(e){
     video.currentTime = videolocate;
 }
 
+function makeFullScreen(){
+    video.requestFullscreen();
+}
+
 // hook the functions to event listeners
 let mousedown = false;
 
@@ -56,3 +61,6 @@ progress.addEventListener("mousemove",(e)=>mousedown&&slideVideo(e));
 progress.addEventListener("mousedown",()=>mousedown = true)
 progress.addEventListener("mouseup",()=>mousedown = false)
 progress.addEventListener("click",slideVideo)
+
+// bonus: add a fullscreen button
+fullScreen.addEventListener("click",makeFullScreen)

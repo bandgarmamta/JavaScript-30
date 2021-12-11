@@ -33,8 +33,7 @@ function displayList(plates=[],plateList){
 }
 
  function toggleDone(e){
-     console.log("daed")
-     if(!e.target.matches('input')) return;
+    if(!e.target.matches('input')) return;
     const el = e.target;
     const index = el.dataset.index;
     items[index].done = ! items[index].done
@@ -49,7 +48,28 @@ function displayList(plates=[],plateList){
      displayList(items,itemsList);
  }
 
+ function checkAll(){
+     for(var i=0;i<items.length;i++){
+        items[i].done =true
+     }
+    //  console.log(items)
+    localStorage.setItem("items",JSON.stringify(items))
+    displayList(items,itemsList);
+ }
+
+ function uncheckAll(){
+    for(var i=0;i<items.length;i++){
+        items[i].done =false
+     }
+    //  console.log(items)
+    localStorage.setItem("items",JSON.stringify(items))
+    displayList(items,itemsList);
+ }
+
+
 addItems.addEventListener("submit",newItem);
 itemsList.addEventListener("click",toggleDone)
+btns[0].addEventListener("click",checkAll)
+btns[1].addEventListener("click",uncheckAll)
 btns[2].addEventListener("click",clearAll)
 displayList(items,itemsList);

@@ -26,7 +26,8 @@ function paintToCanvas(){
         //pixels = redEffect(pixels);
         //pixels = rgbsplit(pixels);
         //ctx.globalAlpha = 0.1;
-        pixels = greenScreen(pixels);
+        //pixels = greenScreen(pixels);
+        pixels = funColor(pixels);
         ctx.putImageData(pixels,0,0);
 
     },16)
@@ -83,8 +84,15 @@ function greenScreen(pixels){
         if(red >=levels.rmin && green >=levels.gmin && blue>=levels.bmin && red<=levels.rmax && green<=levels.gmax && blue<=levels.bmax){
             pixels.data[i+3]=0;
         }
+    }
+    return pixels;
+}
 
-
+function funColor(pixels){
+    for(let i=0;i<pixels.data.length;i+=4){
+        pixels.data[i+0]+=50; // red
+        pixels.data[i+1]-=100; // green
+        pixels.data[i+2]*=0.5; // blue
     }
     return pixels;
 }

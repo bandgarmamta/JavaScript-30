@@ -22,8 +22,33 @@ function paintToCanvas(){
 
     return setInterval(()=>{
         ctx.drawImage(video,0,0,width,height);
+        //let pixels = ctx.getImageData(0,0,width,height);
     },16)
 }
 
+function takePhoto(){
+    // play click sound
+    snap.currentTime = 0;
+    snap.play();
+
+    // take photo and download
+    const data = canvas.toDataURL("image/jpeg");
+    const link = document.createElement("a");
+    link.href = data;
+    link.setAttribute("download" ,  "handsome");
+    // link.textContent = 'Download Image'; for only link of image 
+    // image displayed on screen and can be downloaded on clicking
+    link.innerHTML = `<img src="${data}" alt="Coooool"/>`
+    strip.insertBefore(link,strip.firstChild);
+}
+
+
+
+
+
+
+
 getVideo();
-//paintToCanvas();
+video.addEventListener("canplay",paintToCanvas)
+
+

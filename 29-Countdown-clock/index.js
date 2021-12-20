@@ -29,8 +29,14 @@ function displayTimeLeft(seconds){
     const secondsRemaining = seconds % 60;
     const display = `${minutes}:${secondsRemaining<10? '0':""}${secondsRemaining}`
     document.title = display
-    timerDisplay.textContent = display
+    if(minutes==0 && secondsRemaining<=10){
+        timerDisplay.style.color = "red";
+    }else{
+        timerDisplay.style.color = "white";
+    }
     
+    timerDisplay.textContent = display
+ 
 }
 
 

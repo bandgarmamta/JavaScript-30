@@ -10,12 +10,11 @@ function changeSpeed(e){
     const percent = y/this.offsetHeight;
     const height = Math.round(percent*100) + "%"
     const playbackRate = percent *(max-min) + min
+
     speedBar.style.height = height;
     speedBar.textContent = playbackRate.toFixed(2) + 'x';
+
     video.playbackRate = playbackRate;
-
-
-
 }
 
 speed.addEventListener("mousemove",changeSpeed)

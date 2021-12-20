@@ -47,9 +47,9 @@ buttons.forEach(i=>i.addEventListener('click',function(){
     timer(seconds);
 }))
 
-// document.customForm.querySelector.addEventListener("submit",function(e){
-//     e.preventDefault()
-//     const mins = this.minutes 
-//     timer(mins*60)
-//     this.reset();
-// });
+document.customForm.addEventListener("submit",function(e){
+    e.preventDefault()
+    const mins = this.minutes.value;
+    timer(mins*60)
+    this.reset();
+});

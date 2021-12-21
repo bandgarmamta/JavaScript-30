@@ -9,5 +9,6 @@ divs.forEach(i=>i.addEventListener("click",logText,{capture:true}));
 
 // this button can be clicked only once
 document.querySelector("button").addEventListener("click",()=>{
-    console.log(" kajebvakevjyq")
+    console.log("You have clicked button!!")
+    console.log("You can click this button only once")
 },{once:true})

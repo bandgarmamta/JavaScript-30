@@ -26,9 +26,17 @@ html {
   }
   
   .photo {
-    width: 100%;
+    /* width: 100%; */
     float: left;
+    margin: 2rem;
   }
+  
+  .controls{
+   margin:2rem;
+  }
+ .rgb{
+    margin:2rem;
+  }  
   
   .player {
     position: absolute;
@@ -40,9 +48,20 @@ html {
   /*
     Strip!
   */
-  
+  span{
+    margin-left:40rem;
+    font-size:25px;
+    font-weight: bold;
+
+  }
+
+  label{
+    font-size: 15px;
+  }
+
   .strip {
-    padding: 2rem;
+   
+ padding: 2rem;
   }
   
   .strip img {

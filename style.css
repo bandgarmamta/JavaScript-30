@@ -3,27 +3,40 @@
 
 body{
     /* text-align: center; */
-    background-color: wheat;
+    background-image: linear-gradient(to right,#69FF97, #00E4FF);
     font-family: 'Open Sans', sans-serif;
 }
 
 h1{
-    font-size:50px;
+    text-align: center;
+    font-size:45px;
 }
 
 ol{
-    margin-top:2rem;
-    
+    margin-top:0.5rem;
 }
 
 li{
     list-style-position: inside;
-    margin-top: 1rem;
-    font-size:22px;
+    margin-top: 0.7rem;
+    font-size:20px;
 }
 
 a{
     color: black;
 }
 
+.left {
+    display:inline-block;
+    margin-left:8rem;
+    
+}  
 
+.right{
+
+    margin-left:15rem;    
+    display:inline-block;
+    
+}
+ 
+    

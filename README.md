@@ -1,6 +1,6 @@
 # JavaScript-30
-A 30 days course on JavaScript. 
-Things you can look for:
+A 30 days course on JavaScript. <br>
+Things you can look for here:
 - Live Projects
 - Notes
 

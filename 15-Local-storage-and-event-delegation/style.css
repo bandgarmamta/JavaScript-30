@@ -7,7 +7,9 @@ html {
     align-items: center;
     text-align: center;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    background-color: grey;
+    background:url("https://merriam-webster.com/assets/mw/images/gallery/gal-home-edpick-lg/thank-goodness-for-tapas-3090-874ef2eedb660ed207a159ad091d042c@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   *,
